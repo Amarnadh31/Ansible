@@ -6,8 +6,8 @@
       ansible.builtin.package: #heterogeneous module that can work for all distributions
         name: "nginx"
         state: "present"
-        
-    - name: "start the nginx service"
+
+    - name: start the nginx service
       absible.builtin.service:
         name: "nginx"
         state: "started"
