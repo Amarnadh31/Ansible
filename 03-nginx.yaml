@@ -2,6 +2,6 @@
   hosts: app
   tasks:
     - name: "install Nginx"
-      ansible.builtin.package:
+      ansible.builtin.package: #heterogeneous module that can work for all distributions
         name: "nginx"
         state: "present"
