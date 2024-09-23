@@ -1,5 +1,5 @@
 - name: Play-01
   hosts: app
   tasks:
-    - name: Play01 task01
+  - name: Play01 task01
       ansible.builtin.denug:
