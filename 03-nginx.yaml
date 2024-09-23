@@ -5,7 +5,7 @@
     - name: "install Nginx"
       ansible.builtin.package: #heterogeneous module that can work for all distributions
         name: "nginx"
-        state: "present"
+        state: "installed"
 
     - name: "start the nginx service"
       ansible.builtin.service:
