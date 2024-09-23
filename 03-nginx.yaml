@@ -9,5 +9,5 @@
 
     - name: start the nginx service
       absible.builtin.service:
-        name: "nginx"
-        state: "started"
+        name: nginx
+        state: started
