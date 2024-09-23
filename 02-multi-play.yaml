@@ -2,4 +2,4 @@
   hosts: app
   tasks:
   - name: Play01 task01
-      ansible.builtin.debug:
+    ansible.builtin.debug:
