@@ -1,4 +1,4 @@
-- Name: ping the server
+- name: ping the server
   hosts: app
   tasks:
     -name: ping the server
