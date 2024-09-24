@@ -1,0 +1,6 @@
+- name: passing args through 
+  hosts: app
+  tasks:
+  - name: getting vars from commands
+    ansible.builtin.debug:
+      msg: "hello, i'm taken course on {{course}}. course duration is: {{duration}} , trainer is {{trainer}}"
