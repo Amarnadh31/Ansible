@@ -10,3 +10,5 @@
       course: devops with aws from task
       duration: 120hrs
       trainer: shiva
+    ansible.builtin.debug:
+      msg: "hello, i'm doing course on {{course}}, total duration is :{{duration}}. trainer is {{trainer}}"
