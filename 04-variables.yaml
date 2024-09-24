@@ -2,8 +2,8 @@
   hosts: app
   vars:
     course: "devops with aws"
-    duration: 120hrs
-    trainer: shiva
+    duration: "120hrs"
+    trainer: "shiva"s
   tasks:
   - name: printing info
     ansible.builtin.debug:
