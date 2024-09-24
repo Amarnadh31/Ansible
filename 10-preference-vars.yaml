@@ -9,10 +9,10 @@
   #   prompt: "enter course duration: "
   # - name: trainer
   #   prompt: "enter trainer name: "
-  vars:
-    course: "devops with aws playbook"
-    duration: "120hrs"
-    trainer: "shiva"
+  # vars:
+  #   course: "devops with aws playbook"
+  #   duration: "120hrs"
+  #   trainer: "shiva"
   tasks:
   - name: checking which vars are first preference
     # vars:
