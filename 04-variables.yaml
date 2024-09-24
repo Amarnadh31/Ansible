@@ -1,0 +1,6 @@
+- name: print the vars
+  hosts: app
+  tasks:
+  - name: printing info
+    ansible.builtin.debug:
+      msg: "Hello, I'm Learning Devops with aws, duration is: 120hrs trainer is siva"
