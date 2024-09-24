@@ -1,6 +1,6 @@
 - name: task variables
   hosts: app
-  vars:
+  vars: #Play level, all tasks in this play book can access these vars
     course: devops with aws from task
     duration: 120hrs
     trainer: shiva
