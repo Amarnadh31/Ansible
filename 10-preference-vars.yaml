@@ -1,7 +1,7 @@
 - name: vars preference task
   hosts: app
-  vars_files:
-  - vars.yaml
+  # vars_files:
+  # - vars.yaml
   vars_prompt:
   - name: course
     prompt: "Enter the course name: "
