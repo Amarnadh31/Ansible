@@ -10,6 +10,6 @@
   - name: trainer
     prompt: "please enter course trainer"
   tasks:
-  - namw: printing vars from prompt
+  - name: printing vars from prompt
     ansible.builtin.debug:
       msg: "hello, i'm taken course on {{course}}. course duration is: {{duration}} , trainer is {{trainer}}"
