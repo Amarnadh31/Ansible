@@ -8,6 +8,6 @@
   tasks:
   - name: starting nginx service
     ansible.builtin.service:
-    name: httpd
-    state: started
-    enabled: yes
+      name: httpd
+      state: started
+      enabled: yes
