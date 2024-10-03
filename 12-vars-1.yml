@@ -1,5 +1,7 @@
 - name: variable
   hosts: app
+  vars_files:
+  - var2.yaml
   vars:
     place: charminar
     city: hyderabad
