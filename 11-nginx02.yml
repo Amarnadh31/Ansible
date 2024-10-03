@@ -3,11 +3,11 @@
   tasks:
   - name: installing nginx
     ansible.builtin.package:
-      name: ngnix
+      name: nginx
       state: present
   tasks:
   - name: starting nginx service
     ansible.builtin.service:
-      name: ngnix
+      name: nginx
       state: started
       enabled: yes
