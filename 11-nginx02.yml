@@ -5,7 +5,7 @@
     ansible.builtin.package:
       name: "nginx"
       state: "present"
-  tasks:
+      
   - name: "starting nginx service"
     ansible.builtin.service:
       name: "nginx"
