@@ -1,0 +1,9 @@
+- name: variable
+  hosts: app
+  vars:
+    place: charminar
+    city: hyderabad
+  tasks:
+  - name: using variables
+    ansible.builtin.debug:
+      msg: "{{place}} is located in {{hyderabad}}"
