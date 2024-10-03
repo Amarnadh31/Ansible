@@ -6,4 +6,4 @@
   tasks:
   - name: using variables
     ansible.builtin.debug:
-      msg: "{{place}} is located in {{hyderabad}}"
+      msg: "{{place}} is located in {{city}}"
