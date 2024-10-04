@@ -11,10 +11,10 @@
     - shell
     - terraform
     fees: true
-    tools:
-      ci: jenkins
-      Ai: ansible
-      container: k8s
+  tools:
+    ci: jenkins
+    Ai: ansible
+    container: k8s
   tasks:
   - name: print the dtata types
     ansible.builtin.debug:
