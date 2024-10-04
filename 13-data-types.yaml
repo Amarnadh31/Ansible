@@ -1,5 +1,6 @@
 - name: info about data types
   hosts: local
+  connection: local
   vars:
     course: devops
     duration: 120
