@@ -1,5 +1,5 @@
 - name: nginx installing
-  hosts : app
+  hosts : db_servers
   become: yes
   tasks:
   - name: installing nginx
