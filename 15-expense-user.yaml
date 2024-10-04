@@ -3,6 +3,5 @@
   become: yes
   tasks:
   - name: check if expense user is exist or not
-    ansible.builtin.command: expense id
+    ansible.builtin.command: id expense
     register: user
-    
