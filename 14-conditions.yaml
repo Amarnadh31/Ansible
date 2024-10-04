@@ -1,12 +1,12 @@
 - name: print conditions
   hosts: local
   connection: local
-  # vars_prompt:
-  # - name: number
-  #   prompt: "Please enter number"
-  #   private: false
-  vars:
-    number: 54
+  vars_prompt:
+  - name: number
+    prompt: "Please enter number"
+    private: false
+  # vars:
+  #   number: 54
   tasks:
   - name: print the number
     ansible.builtin.debug:
