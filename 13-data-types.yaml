@@ -1,0 +1,21 @@
+- name: info about data types
+  hosts: local
+  vars:
+    course: devops
+    duration: 120
+    trainer: Amar
+    topics:
+    - linux
+    - windows
+    - ansible
+    - shell
+    - terraform
+    fees: true
+    tools:
+      ci: jenkins
+      Ai: ansible
+      container: k8s
+tasks:
+- name: print the dtata types
+  ansible.builtin.debug:
+    msg: hello i am learning {{course}} with in {{duration}} with the mentor {{trainer}} with list of {{topics}} as {{fees}} tools are {{tools}}
