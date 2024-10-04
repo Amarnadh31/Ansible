@@ -3,6 +3,10 @@
   become: yes
   tasks:
   - name: check if expense user is exist or not
-    ansible.builtin.command: id expense
+    ansible.builtin.command: id root
     register: user
     ignore_errors: true
+
+  # - name: create user if user not created yet
+  #   ansible.builtin.command: useradd expense
+  #   when: user.rc !=0
