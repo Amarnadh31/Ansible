@@ -16,4 +16,4 @@
   - name: print the highest number
     ansible.builtin.debug:
       msg: "the selected number {{number}} is greater than 20"
-    when: number | int => 20
+    when: number | int >= 20
