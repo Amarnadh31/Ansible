@@ -1,0 +1,8 @@
+- name: creating expense user
+  hosts: db_servers
+  become: yes
+  tasks:
+  - name: check if expense user is exist or not
+    ansible.builtin.command: expense id
+    register: user
+    
