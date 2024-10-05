@@ -24,7 +24,7 @@
       image_id: "{{ ami }}"
       network_interfaces:
       - assign_public_ip: false
-    when: item != {{item.frontend}}
+    when: instances != frontend
       # state: absent
     loop: "{{instances}}"
     # loop:
