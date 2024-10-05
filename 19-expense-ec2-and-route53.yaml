@@ -22,9 +22,9 @@
       instance_type: "{{ instance_type }}"
       security_group: "{{ sg }}"
       image_id: "{{ ami }}"
-      network_interfaces:
-      - assign_public_ip: false
-    when: item != instances.frontend
+    #   network_interfaces:
+    #   - assign_public_ip: false
+    # when: item != instances.frontend
       # state: absent
     loop: "{{instances}}"
     # loop:
