@@ -19,6 +19,7 @@
       image_id: "{{ ami }}"
     loop: "{{instance_names}}"
     register: my_info
+    #state: present
 
   - name: printing output
     ansible.builtin.debug:
