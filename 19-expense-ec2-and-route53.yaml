@@ -22,9 +22,7 @@
       instance_type: "{{ instance_type }}"
       security_group: "{{ sg }}"
       image_id: "{{ ami }}"
-      network_interfaces:
-      - assign_public_ip: true
-        when: item == frontend
+      
       # state: absent
     loop: "{{instances}}"
     # loop:
@@ -33,3 +31,9 @@
     # - frontend
     register: my_instance
     # state: absent
+
+  - name: assigning public ip
+    amazon.aws.ec2_instance:
+    network_interfaces:
+      - assign_public_ip: false
+    when: item != frontend
