@@ -1,0 +1,8 @@
+- name: printing filters
+  hosts: db_servers
+  tasks:
+  - name: printing upper case
+    vars:
+      wishing: Hello Prakash
+    ansible.builtin.debug:
+      msg: "{{wishing}} | upper"
