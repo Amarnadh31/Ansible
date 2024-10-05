@@ -1,0 +1,25 @@
+- name: creating ec2 and route 53
+  hosts: app
+  vars:
+    subnet: "subnet-0a3c59eef41a51efe"
+    instance_id: "t2.micro"
+    ami: "ami-09c813fb71547fc4f"
+    sg : "sg-0c877d770e3e4833f"
+    instance_names:
+    - mysql
+    - backend
+    - frontend
+  tasks:
+  - name: creating ec2
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      vpc_subnet_id: "{{ subnet }}"
+      instance_type: "{{ instance_id }}"
+      security_group: "{{ sg }}"
+      image_id: "{{ ami }}"
+    loop: "{{instance_names}}"
+    register: my_info
+
+  - name: printing output
+    ansible.builtin.debug:
+      msg: "{{my_info}}"
