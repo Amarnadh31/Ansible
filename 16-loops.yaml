@@ -1,0 +1,14 @@
+- name: printing loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: loops
+  ansible.builtin.debug:
+    msg: "i love {{item}}"
+  loops:
+  - apple
+  - grape
+  - mango
+  - orange
+  - guvva
+  - banana
