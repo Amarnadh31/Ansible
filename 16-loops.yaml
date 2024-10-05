@@ -5,10 +5,10 @@
   - name: loops
     ansible.builtin.debug:
       msg: "i love {{item}}"
-  loop:
-  - apple
-  - grape
-  - mango
-  - orange
-  - guvva
-  - banana
+    loop:
+    - apple
+    - grape
+    - mango
+    - orange
+    - guvva
+    - banana
