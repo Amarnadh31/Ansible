@@ -19,3 +19,9 @@
       wishing: Hello
     ansible.builtin.debug:
       msg: "{{wishing | upper}} {{name | lower}}"
+
+  - name: printing unique numbers
+    vars:
+      numbers: [1,2,3,5,4,5,4,3,2,1,33,2,13]
+    ansible.builtin.debug:
+      msg: "{{numbers | unique}}"
