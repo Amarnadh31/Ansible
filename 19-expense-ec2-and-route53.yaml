@@ -10,6 +10,7 @@
     - mysql
     - backend
     - frontend
+    zone: expensemind.online
   tasks:
   # - name: installing botocore and boto3
   #   ansible.builtin.command: pip3.9 install botocore boto3
@@ -37,3 +38,14 @@
   - name: output of instances
     ansible.builtin.debug:
       msg: "{{ my_instance}}"
+  
+  - name: create route 53 records
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{item.item}}.{{ zone }}"
+      type: A
+      ttl: 1
+      value: "{{item.instances[0].private_ip_address}}"
+
+    loop: "{{my_instance.results}}"
