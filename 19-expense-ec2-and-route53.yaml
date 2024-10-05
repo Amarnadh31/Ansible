@@ -22,6 +22,7 @@
       instance_type: "{{ instance_type }}"
       security_group: "{{ sg }}"
       image_id: "{{ ami }}"
+      state: absent
     loop: "{{instances}}"
     # loop:
     # - mysql
