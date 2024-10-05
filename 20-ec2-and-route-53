@@ -29,7 +29,7 @@
     
   - name: creating route 53 private records
     amazon.aws.route53:
-      state: present
+      state: absent
       zone: "{{ zone }}"
       record: "{{item.item}}.{{zone}}"
       type: A
@@ -41,7 +41,7 @@
 
   - name: creating route 53 public records
     amazon.aws.route53:
-      state: present
+      state: absent
       zone: "{{ zone }}"
       record: "{{zone}}"
       type: A
