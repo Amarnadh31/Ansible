@@ -1,5 +1,6 @@
 - name: create ec2 and route 53
-  hosts: app
+  hosts: local
+  connection: local
   become: yes
   vars:
     subnet: "subnet-04ae1be87eba08509"
