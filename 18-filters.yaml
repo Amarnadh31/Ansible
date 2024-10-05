@@ -16,6 +16,6 @@
   - name: printing upper and lower
     vars:
       name: Prakash
-      whishing: Hello
+      wishing: Hello
     ansible.builtin.debug:
       msg: "{{wishing | upper}} {{name | lower}}"
