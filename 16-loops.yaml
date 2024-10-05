@@ -3,8 +3,8 @@
   connection: local
   tasks:
   - name: loops
-  ansible.builtin.debug:
-    msg: "i love {{item}}"
+    ansible.builtin.debug:
+      msg: "i love {{item}}"
   loops:
   - apple
   - grape
