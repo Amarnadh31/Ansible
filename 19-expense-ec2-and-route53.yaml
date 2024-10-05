@@ -33,3 +33,7 @@
     # - frontend
     register: my_instance
     # state: absent
+
+  - name: output of instances
+    ansible.builtin.debug:
+      msg: "{{ my_instance}}"
