@@ -9,6 +9,7 @@
     - mysql
     - backend
     - frontend
+    zone: expensemind.online
   tasks:
   - name: creating ec2
     amazon.aws.ec2_instance:
@@ -19,7 +20,20 @@
       image_id: "{{ ami }}"
     loop: "{{instance_names}}"
     register: my_info
+    #state: present
 
   - name: printing output
     ansible.builtin.debug:
       msg: "{{my_info}}"
+    
+  - name: creating route 53 private records
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{item.item}}.{{zone}}"
+      type: A
+      ttl: 1
+      value: "{{item.instances[0].private_ip_address}}"
+      wait: true
+    loop: "{{instance_names.results}}"
+
