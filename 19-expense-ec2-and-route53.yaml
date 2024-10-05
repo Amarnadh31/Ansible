@@ -41,7 +41,7 @@
   
   - name: create route 53 records
     amazon.aws.route53:
-      state: present
+      # state: present
       zone: "{{ zone }}"
       record: "{{item.item}}.{{ zone }}"
       type: A
