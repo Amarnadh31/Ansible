@@ -47,7 +47,22 @@
       type: A
       ttl: 1
       value: "{{item.instances[0].private_ip_address}}"
+      wait : true
       overwrite : true
       state: absent
 
     loop: "{{my_instance.results}}"
+
+  - name: create route 53 public record
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ zone }}"
+      type: A
+      ttl: 1
+      value: "{{item.instances[0].public_ip_address}}"
+      wait : true
+      overwrite : true
+      loop: "{{my_instance.results}}"
+      when: my_instance.results.item == "frontend"
+      # state: absent
