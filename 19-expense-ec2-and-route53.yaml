@@ -28,3 +28,4 @@
     # - backend
     # - frontend
     register: my_instance
+    state: absent
