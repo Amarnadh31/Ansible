@@ -48,5 +48,6 @@
       value: "{{item.instances[0].public_ip_address}}"
       wait: true
     loop: "{{my_info.results}}"
+    when: item.item == "frontend"
 
 
