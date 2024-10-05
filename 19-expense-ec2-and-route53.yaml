@@ -19,4 +19,5 @@
       security_group: "{{ sg }}"
       image_id: "{{ ami }}"
     loop: instances
+    wantlist=True
     register: my_instance
