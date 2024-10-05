@@ -26,7 +26,7 @@
     #   network_interfaces:
     #   - assign_public_ip: false
     # when: item != instances.frontend
-      # state: absent
+      state: absent
     loop: "{{instances}}"
     # loop:
     # - mysql
@@ -48,6 +48,6 @@
       ttl: 1
       value: "{{item.instances[0].private_ip_address}}"
       overwrite : true
-      # state: absent
+      state: absent
 
     loop: "{{my_instance.results}}"
