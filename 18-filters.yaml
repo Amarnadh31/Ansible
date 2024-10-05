@@ -25,3 +25,12 @@
       numbers: [1,2,3,5,4,5,4,3,2,1,33,2,13]
     ansible.builtin.debug:
       msg: "{{numbers | unique}}"
+
+  - name: printing dict to items
+    vars:
+      course:
+        name: testing
+        time: 123
+        mentor: ravi
+    ansible.builtin.debug:
+      msg: "{{course | dict2items}}"
