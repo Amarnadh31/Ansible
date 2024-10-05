@@ -26,7 +26,7 @@
     #   network_interfaces:
     #   - assign_public_ip: false
     # when: item != instances.frontend
-      state: present
+      state: absent
     loop: "{{instances}}"
     # loop:
     # - mysql
