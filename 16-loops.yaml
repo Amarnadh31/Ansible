@@ -4,11 +4,11 @@
   tasks:
   - name: loops
     ansible.builtin.debug:
-      msg: "i love {{item}}"
+      name: "i love {{item.name}}"
+      state: "taste is {{item.taste}}"
     loop:
-    - apple
-    - grape
-    - mango
-    - orange
-    - guvva
-    - banana
+    - { name: apple, taste: good}
+    - {name: grape, taste: salty}
+    - {name: mango, taste: sweet}
+    - {name: orange, taste: sour}
+    - {name: banana, taste: sweet}
