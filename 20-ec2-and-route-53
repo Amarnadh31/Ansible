@@ -36,6 +36,7 @@
       ttl: 1
       value: "{{item.instances[0].private_ip_address}}"
       wait: true
+      overwrite: true
     loop: "{{my_info.results}}"
 
   - name: creating route 53 public records
@@ -47,6 +48,7 @@
       ttl: 1
       value: "{{item.instances[0].public_ip_address}}"
       wait: true
+      overwrite: true
     loop: "{{my_info.results}}"
     when: item.item == "frontend"
 
