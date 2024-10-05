@@ -18,7 +18,7 @@
       instance_type: "{{ instance_id }}"
       security_group: "{{ sg }}"
       image_id: "{{ ami }}"
-      # state: absent
+      state: absent
     loop: "{{instance_names}}"
     register: my_info
     #state: present
