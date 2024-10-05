@@ -4,8 +4,7 @@
   tasks:
   - name: loops
     ansible.builtin.debug:
-      name: "i love {{item.name}}"
-      state: "taste is {{item.taste}}"
+      msg: "i love {{item.name}} taste is {{item.taste}}"
     loop:
     - { name: apple, taste: good}
     - {name: grape, taste: salty}
