@@ -5,3 +5,17 @@
   - name: pinging server
     ansible.builtin.debug:
       msg: "hello ansible"
+
+- name: install nginx
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: installing nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
+  - name: starting nginx
+    ansible.builtin.package:
+      name: nginx
+      state: started
+      enabled: yes
