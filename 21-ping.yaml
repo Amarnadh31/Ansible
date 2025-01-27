@@ -43,5 +43,7 @@
     prompt: please enter the course
   - name: loc
     prompt: please enter the loc
-  ansible.builtin.debug:
-    msg: "i'm joined {{COURSE}} in {{loc}}"
+  tasks:
+  - name: prompting varsa
+    ansible.builtin.debug:
+      msg: "i'm joined {{COURSE}} in {{loc}}"
