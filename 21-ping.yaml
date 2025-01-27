@@ -41,8 +41,10 @@
   vars_prompt:
   - name: COURSE
     prompt: please enter the course
+    private: false
   - name: loc
     prompt: please enter the loc
+    private: false
   tasks:
   - name: prompting varsa
     ansible.builtin.debug:
