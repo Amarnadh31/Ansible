@@ -19,3 +19,14 @@
       name: nginx
       state: started
       enabled: yes
+
+- name: variables
+  hosts: localhost
+  become: yes
+  vars:
+    TIME: "120"
+    AGE: "34"
+  tasks:
+  - name: adding vars
+    ansible.builtin.debug:
+      msg: "i don't have time {{TIME}}, But my age is {{AGE}}"
