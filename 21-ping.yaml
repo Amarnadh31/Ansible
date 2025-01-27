@@ -1,7 +1,7 @@
 - name: ping server
   hosts: localhost
-  connection: local
   become: yes
   tasks:
   - name: pinging server
     ansible.builtin.ping:
+      msg: "hello ansible"
