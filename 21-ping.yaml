@@ -30,3 +30,8 @@
   - name: adding vars
     ansible.builtin.debug:
       msg: "i don't have time {{TIME}}, But my age is {{AGE}}"
+  - name: modifying vars
+    vars:
+      AGE: "27"
+      ansible.builtin.debug:
+        msg: "i don't have time {{TIME}}, But my age is {{AGE}}"
