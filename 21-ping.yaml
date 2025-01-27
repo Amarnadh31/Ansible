@@ -1,5 +1,6 @@
 - name: ping server
-  host: localhost
+  host: local
+  connection: local
   become: yes
   tasks:
   - name: pinging server
