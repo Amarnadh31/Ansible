@@ -35,3 +35,13 @@
       AGE: "27"
     ansible.builtin.debug:
       msg: "i don't have time {{TIME}}, But my age is {{AGE}}"
+
+- name: variables prompt
+  hosts: localhost
+  vars_prompt:
+  - name: COURSE
+    prompt: please enter the course
+  - name: loc
+    prompt: please enter the loc
+  ansible.builtin.debug:
+    msg: "i'm joined {{COURSE}} in {{loc}}"
